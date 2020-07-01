@@ -1,0 +1,143 @@
+body {
+   display: grid;
+   width: 100vw;
+   height: 100vh;
+   grid-template-rows: 40px 1fr;
+   grid-template-columns: minmax(170px, 1fr) 5fr;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#headbar {
+   display: grid;
+   width: 100vw;
+   grid-template-columns: minmax(170px, 1fr) 2fr 3fr;
+   grid-column: 1 / span 3;
+   grid-row: auto;
+   background-color: #E25845;
+   border-color: #E14F3A;
+   border-style: solid;
+   border-width: 1px;
+
+   color: #fefefe;
+}
+
+#headbar > div {
+   display: flex;
+   align-items: center;
+   padding-left: 8px;
+}
+
+#projects {
+   padding-top: 5px;
+   background-color: #fafafa;
+   border-color: #DE8578 #ebebeb;
+   border-style: solid solid none none;
+   border-width: 1px;
+   display: flex;
+   flex-direction: column;
+}
+
+#todos {
+   padding: 40px 40px;
+   border-color: #DE8578;
+   border-style: solid none none none;
+   border-width: 1px;
+   display: flex;
+   flex-direction: column;
+}
+
+#todoHeading {
+   height: 40px;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.project {
+   padding-left: 18px;
+   display: flex;
+   flex-direction: row;
+   height: 37px;
+   align-items: center;
+}
+
+.todo {
+   display: flex;
+   flex-direction: row;
+   height: 37px;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.todoLeft, .todoRight {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.project:hover {
+   background-color: #f6f6f6;
+}
+
+.todo:hover {
+   background-color: #fbfbfb;
+}
+
+.selected {
+   background-color: #ffffff !important;
+   font-weight: bold;
+}
+
+.dot {
+   height: 10px;
+   width: 10px;
+   background-color: #FFCC00;
+   border-radius: 50%;
+   display: inline-block;
+}
+
+.todoDot {
+   height: 15px;
+   width: 15px;
+   background-color: #FCF0ED;
+   border-color: #E25845;
+   border-style: solid;
+   border-width: 1.5px;
+   border-radius: 50%;
+   display: inline-block;
+}
+
+.plus {
+   font-size: 40px;
+   font-family: 'Raleway', sans-serif;
+   color: #E25845
+ }
+
+.pTitle {
+   padding-left: 10px;
+   height: 34px;
+   display: flex;
+   align-items: center;
+}
+
+.pType {
+   padding-right: 7px;
+}
+
+#details {
+   border-color: #DE8578 #ebebeb;
+   border-style: solid none none solid;
+   border-width: 1px;
+}
+
+.todoQuantity {
+   display: flex;
+   padding-top: 4px;
+   padding-left: 6px;
+   font-size: 12px;
+   font-weight: lighter;
+   color: #949494;
+}
+.lighter {
+   color:#949494;
+   font-weight: 100;
+}

@@ -1,4 +1,7 @@
-console.log('test');
+import { createToDo, helloWorld } from './todo';
+
+let testTodo = createToDo('go on a run', 'running is great for you! it releases endorphins', 'tomorrow', 'high', 'none', false);
+console.log(testTodo);
 /*
 to-do object
    title
