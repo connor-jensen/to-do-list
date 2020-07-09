@@ -6,10 +6,10 @@ import { createProject } from './project';
 
 let testProject = createProject('This todo app');
 
-let todo1 = createTodo(testProject.title, 'Add due date functionality', 'tomorrow', 'none', false);
-let todo2 = createTodo(testProject.title, 'Add integration with Today / Next 7 Days', 'tomorrow', 'none', false);
-let todo3 = createTodo(testProject.title, 'Make todos cross of when clicked', 'tomorrow', 'none', false);
-let todo4 = createTodo(testProject.title, 'Make Projects/todos able to be deleted', 'tomorrow', 'none', false);
+let todo1 = createTodo(testProject.title, 'Add due date functionality', 'tomorrow', false);
+let todo2 = createTodo(testProject.title, 'Add integration with Today / Next 7 Days', 'tomorrow', false);
+let todo3 = createTodo(testProject.title, 'Make todos cross of when clicked', 'tomorrow', true);
+let todo4 = createTodo(testProject.title, 'Make Projects/todos able to be deleted', 'tomorrow', false);
 
 testProject.addTodo(todo1);
 testProject.addTodo(todo2);

@@ -9,13 +9,13 @@ const controller = (function () {
    let todayProject = createProject("Today");
    let weekProject = createProject("Next 7 Days");
    let projects = [todayProject, weekProject];
-
-   let testTodo = createTodo("test project", 'go on a really fast run', 'tomorrow', 'none', false);
-   console.log(testTodo);
    
-
    const getProject = (projectTitle) => { 
       return projects.find(project => project.title === projectTitle) 
+   }
+
+   const getTodo = (project, todoTitle) => {
+      return project.toDos.find(todo => todo.title === todoTitle);
    }
 
    const getSelectedProject = () => {
@@ -40,11 +40,18 @@ const controller = (function () {
       selectProject(project);
    }
 
+   const todoClickEvent = (event) => {
+      let todoDiv = event.currentTarget;
+      todoDiv.classList.toggle('completed');
+      let todo = getTodo(getSelectedProject(), todoDiv.children[0].children[1].innerHTML);
+      todo.completed = !todo.completed;
+      console.log(todo);
+   }
+
    const addProjectPressEnter = (event) => {
       if (event.keyCode === 13) {
          event.preventDefault();
          let newProject = createProject(event.currentTarget.value);
-         console.log({newProject});
          addProjectDiv(newProject);
          event.currentTarget.value = null;
          selectProject(newProject);
@@ -55,7 +62,6 @@ const controller = (function () {
       if (event.keyCode === 13) {
          event.preventDefault();
          let currentProject = getSelectedProject();
-         // console.log(`current project is: ${currentProject}`);
          let newTodo = createTodo(currentProject.title, event.currentTarget.value, 'no date specified', false); 
          currentProject.addTodo(newTodo);
          event.currentTarget.value = null;
@@ -72,12 +78,18 @@ const controller = (function () {
 
    const addTodoDiv = (todo) => {
       let todoDiv = renderer.addTodo(todo);
+      todoDiv.addEventListener('click', todoClickEvent);
    }
 
    let projectElements = elements.getProjects();
    projectElements.forEach(project => {
       project.addEventListener('click', projectClickEvent);
    });
+
+   let todoElements = elements.getTodos();
+   todoElements.forEach(todo => {
+      todo.addEventListener('click', todoClickEvent);
+   })
 
    
    let addProjectInputField = elements.getAddProjectInputField();

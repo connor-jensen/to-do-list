@@ -1,4 +1,4 @@
-const createTodo = (parentProject, title, description, dueDate, priority, notes, completed) => {
+const createTodo = (parentProject, title, dueDate, completed) => {
    return {
       parentProject,
       title,

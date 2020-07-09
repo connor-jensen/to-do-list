@@ -49,6 +49,9 @@ const renderer = (function () {
               <div class="pType lighter">${todo.parentProject}</div>
                <span class="Dot"></span>
             </div>`;
+      if (todo.completed) {
+         todoDiv.classList.add('completed');
+      }
       return todoDiv;
    }
 

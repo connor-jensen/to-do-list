@@ -160,3 +160,8 @@ body {
    font-weight: 100;
    color:#949494;
 }
+
+.completed {
+   opacity: 0.4;
+   text-decoration: line-through;
+}
