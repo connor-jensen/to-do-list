@@ -18,6 +18,11 @@ const renderer = (function () {
       projectDiv.classList.toggle('selected');
    }
 
+   function updateProjectTodoCount(project) {
+      let projectDiv = elements.getProjectByName(project.title);
+      projectDiv.children[2].innerHTML = project.toDos.length;
+   }
+
    function updateTodoHeading(projectTitle) {
       elements.getTodoHeading().innerHTML = projectTitle;
    }
@@ -78,7 +83,8 @@ const renderer = (function () {
       createTodoDiv,
       addProject,
       addTodo,
-      clearTodos
+      clearTodos,
+      updateProjectTodoCount
    }
 })();
 

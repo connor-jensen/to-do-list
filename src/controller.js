@@ -60,6 +60,7 @@ const controller = (function () {
          currentProject.addTodo(newTodo);
          event.currentTarget.value = null;
          renderer.addTodo(newTodo);
+         renderer.updateProjectTodoCount(currentProject);
       }
    }
 
