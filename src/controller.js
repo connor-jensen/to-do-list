@@ -65,7 +65,7 @@ const controller = (function () {
          let newTodo = createTodo(currentProject.title, event.currentTarget.value, 'no date specified', false); 
          currentProject.addTodo(newTodo);
          event.currentTarget.value = null;
-         renderer.addTodo(newTodo);
+         addTodoDiv(newTodo);
          renderer.updateProjectTodoCount(currentProject);
       }
    }
