@@ -1,12 +1,10 @@
-const createToDo = (title, description, dueDate, priority, notes, completed) => {
+const createTodo = (parentProject, title, description, dueDate, priority, notes, completed) => {
    return {
+      parentProject,
       title,
-      description,
       dueDate,
-      priority,
-      notes,
       completed
    }
 }
 
-export { createToDo };
+export { createTodo };

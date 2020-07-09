@@ -2,7 +2,7 @@ const createProject = (title) => {
    return {
       title,
       toDos: [],
-      addToDo: function (todo) {
+      addTodo: function (todo) {
          this.toDos.push(todo);
       }
    };

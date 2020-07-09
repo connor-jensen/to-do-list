@@ -28,6 +28,7 @@ body {
 }
 
 #projects {
+   padding-left: 18px;
    padding-top: 5px;
    background-color: #fafafa;
    border-color: #DE8578 #ebebeb;
@@ -53,7 +54,6 @@ body {
 }
 
 .project {
-   padding-left: 18px;
    display: flex;
    flex-direction: row;
    height: 37px;
@@ -74,11 +74,11 @@ body {
    align-items: center;
 }
 
-.project:hover {
+.project:hover, .addProject:hover {
    background-color: #f6f6f6;
 }
 
-.todo:hover {
+.todo:hover, .addTodo:hover {
    background-color: #fbfbfb;
 }
 
@@ -137,7 +137,26 @@ body {
    font-weight: lighter;
    color: #949494;
 }
-.lighter {
+.lighter, ::placeholder {
    color:#949494;
    font-weight: 100;
+   opacity: 1;
+}
+
+.addProject, .addTodo {
+   padding-left: 0px;
+   display: flex;
+   flex-direction: row;
+   height: 37px;
+   align-items: center;
+   order: 1;
+}
+
+#addPInput, #addTInput {
+   background: none;
+   border: none;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16px;
+   font-weight: 100;
+   color:#949494;
 }
