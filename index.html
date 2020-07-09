@@ -12,104 +12,27 @@
          <div></div>
       </div>
       <div id="projects">
-         <div class="project">
+         <div class="project" id="today">
             <i class="fa fa-calendar-o" aria-hidden="true" style="font-size:14px;color:#187E31"></i>
             <div class="pTitle">Today</div>
             <div class="todoQuantity">3</div>
          </div>
-         <div class="project selected">
+         <div class="project selected" id="week">
             <i class="fa fa-calendar" aria-hidden="true" style="font-size:14px;color:#694BB3"></i>
             <div class="pTitle">Next 7 Days</div>
             <div class="todoQuantity">5</div>
          </div>
          <hr width="90%" noshade color="ebebeb" align="right">
-         <div class="project">
-            <span class="dot"></span>
-            <div class="pTitle">Piano</div>
-            <div class="todoQuantity">2</div>
-         </div>
-         <div class="project">
-            <span class="dot"></span>
-            <div class="pTitle">Nand to Tertris</div>
-            <div class="todoQuantity">4</div>
-         </div>
-         <div class="project">
-            <span class="dot"></span>
-            <div class="pTitle">Odin Project</div>
-            <div class="todoQuantity">7</div>
-         </div>
-         <div class="project">
-            <span class="dot"></span>
-            <div class="pTitle">Household</div>
-            <div class="todoQuantity">3</div>
-         </div>
-         <div class="project">
+         <div class="addProject">
             <span class="plus">+</span>
-            <div class="pTitle lighter">Add Project</div>
+            <input type="text" id="addPInput" class="pTitle lighter" placeholder="Add Project">
          </div>
       </div>
       <div id="todos">
          <h1 id="todoHeading">Next 7 Days</h1>
-         <div class="todo">
-            <div class="todoLeft">
-               <span class="todoDot"></span>
-               <div class="pTitle">Design ALU</div>
-            </div>
-            <div class="todoRight">
-               <div class="pType lighter">Nand to Tetris</div>
-               <span class="Dot"></span>
-            </div>
-         </div>
-         <hr width="100%" noshade color="ebebeb" align="center">
-         <div class="todo">
-            <div class="todoLeft">
-               <span class="todoDot"></span>
-               <div class="pTitle">Read Chapter 6</div>
-            </div>
-            <div class="todoRight">
-               <div class="pType lighter">Odin Project</div>
-               <span class="Dot"></span>
-            </div>
-         </div>
-         <hr width="100%" noshade color="ebebeb" align="center">
-         <div class="todo">
-            <div class="todoLeft">
-               <span class="todoDot"></span>
-               <div class="pTitle">Replace AC Filter</div>
-            </div>
-            <div class="todoRight">
-               <div class="pType lighter">Household</div>
-               <span class="Dot"></span>
-            </div>
-         </div>
-         <hr width="100%" noshade color="ebebeb" align="center">
-         <div class="todo">
-            <div class="todoLeft">
-               <span class="todoDot"></span>
-               <div class="pTitle">Butterfly Etude</div>
-            </div>
-            <div class="todoRight">
-               <div class="pType lighter">Piano</div>
-               <span class="Dot"></span>
-            </div>
-         </div>
-         <hr width="100%" noshade color="ebebeb" align="center">
-         <div class="todo">
-            <div class="todoLeft">
-               <span class="todoDot"></span>
-               <div class="pTitle">Wash Cars</div>
-            </div>
-            <div class="todoRight">
-               <div class="pType lighter">Household</div>
-               <span class="Dot"></span>
-            </div>
-         </div>
-         <hr width="100%" noshade color="ebebeb" align="center">
-         <div class="todo">
-            <div class="todoLeft">
-               <span class="plus">+</span>
-               <div class="pTitle lighter">Add Todo</div>
-            </div>
+         <div class="addTodo">
+            <span class="plus">+</span>
+            <input type="text" id="addTInput" class="pTitle lighter" placeholder="Add Todo">
          </div>
       </div>
       <div id="details"></div>
